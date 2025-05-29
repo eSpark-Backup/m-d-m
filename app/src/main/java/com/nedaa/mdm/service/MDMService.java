@@ -31,7 +31,6 @@ import dagger.hilt.android.AndroidEntryPoint;
 import io.reactivex.Single;
 import io.reactivex.disposables.Disposable;
 
-@AndroidEntryPoint
 public class MDMService extends Service {
     private static final String TAG = "MDMService";
     private static final String CHANNEL_ID = "MDMServiceChannel";
@@ -39,8 +38,7 @@ public class MDMService extends Service {
     private static final String SERVER_URL = "https://your-mdm-server.com"; // Replace with your server URL
     private Timer timer;
     private TelephonyManager telephonyManager;
-    @Inject
-    DeviceManager deviceManager;
+    @Inject DeviceManager deviceManager;
     private Disposable deviceStatusDisposable;
 
     @Override

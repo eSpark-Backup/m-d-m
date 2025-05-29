@@ -15,9 +15,9 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import dagger.hilt.android.qualifiers.ApplicationContext;
 import io.reactivex.Single;
 
-@Singleton
 public class DeviceManager {
     private static final String PREF_NAME = "mdm_prefs";
     private static final String KEY_DEVICE_ID = "device_id";
@@ -29,9 +29,10 @@ public class DeviceManager {
     private ApiService deviceApi;
 
     @Inject
-    public DeviceManager(Context context, ApiService deviceApi) {
+    public DeviceManager(@ApplicationContext Context context, ApiService deviceApi) {
+        Context context1 = context.getApplicationContext();
         this.deviceApi = deviceApi;
-        this.prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        this.prefs = context1.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
     }
 
     private SharedPreferences getPrefs(Context context) {

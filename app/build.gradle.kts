@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt)
     id("org.jetbrains.kotlin.kapt")
 }
 
@@ -44,6 +45,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     kapt(libs.hilt.compiler)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
