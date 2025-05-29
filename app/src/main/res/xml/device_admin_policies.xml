@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <!-- Password Policies -->
+        <limit-password /> <!-- Enforce password complexity -->
+        <watch-login /> <!-- Monitor login attempts -->
+        <reset-password /> <!-- Allow password reset -->
+        <force-lock /> <!-- Force device lock -->
+        <wipe-data /> <!-- Allow factory reset -->
+        <expire-password /> <!-- Set password expiration -->
+        <encrypted-storage /> <!-- Require storage encryption -->
+
+        <!-- Device Restrictions -->
+        <disable-camera /> <!-- Disable camera -->
+        <disable-keyguard-features /> <!-- Disable keyguard features -->
+        <disable-account-management /> <!-- Disable account management -->
+        <disable-screen-capture /> <!-- Disable screen capture -->
+        <disable-sms /> <!-- Disable SMS -->
+        <disable-outgoing-calls /> <!-- Disable outgoing calls -->
+        <disable-incoming-calls /> <!-- Disable incoming calls -->
+        <disable-status-bar /> <!-- Disable status bar -->
+        <disable-settings /> <!-- Disable settings -->
+
+        <!-- Network Policies -->
+        <disable-network /> <!-- Disable network -->
+        <disable-wifi /> <!-- Disable WiFi -->
+        <disable-bluetooth /> <!-- Disable Bluetooth -->
+        <disable-nfc /> <!-- Disable NFC -->
+        <disable-usb-storage /> <!-- Disable USB storage -->
+
+        <!-- Application Policies -->
+        <disable-app-installation /> <!-- Disable app installation -->
+        <disable-app-uninstallation /> <!-- Disable app uninstallation -->
+        <disable-app-management /> <!-- Disable app management -->
+        <disable-app-data-backup /> <!-- Disable app data backup -->
+        <disable-app-data-restore /> <!-- Disable app data restore -->
+
+        <!-- Security Policies -->
+        <disable-debugging /> <!-- Disable debugging -->
+        <disable-adb /> <!-- Disable ADB -->
+        <disable-factory-reset /> <!-- Disable factory reset -->
+        <disable-safe-mode /> <!-- Disable safe mode -->
+        <disable-recovery-mode /> <!-- Disable recovery mode -->
+
+        <!-- Location Policies -->
+        <disable-location /> <!-- Disable location services -->
+        <disable-gps /> <!-- Disable GPS -->
+
+        <!-- Other Policies -->
+        <disable-print /> <!-- Disable printing -->
+        <disable-screen-timeout /> <!-- Disable screen timeout -->
+        <disable-sound /> <!-- Disable sound -->
+        <disable-vibration /> <!-- Disable vibration -->
+        <disable-wallpaper /> <!-- Disable wallpaper -->
+        <disable-status-bar-expansion /> <!-- Disable status bar expansion -->
+        <disable-notification-access /> <!-- Disable notification access -->
+        <disable-share /> <!-- Disable sharing -->
+        <disable-clipboard /> <!-- Disable clipboard -->
+        <disable-screenshot /> <!-- Disable screenshots -->
+        <disable-install-unknown-sources /> <!-- Disable unknown sources -->
+        <disable-uninstall-apps /> <!-- Disable app uninstallation -->
+        <disable-add-user /> <!-- Disable adding users -->
+        <disable-remove-user /> <!-- Disable removing users -->
+        <disable-switch-user /> <!-- Disable switching users -->
+        <disable-mount-physical-media /> <!-- Disable mounting physical media -->
+        <disable-unmount-physical-media /> <!-- Disable unmounting physical media -->
+        <disable-physical-media /> <!-- Disable physical media -->
+        <disable-physical-media-removal /> <!-- Disable physical media removal -->
+        <disable-physical-media-insertion /> <!-- Disable physical media insertion -->
+        <disable-physical-media-ejection /> <!-- Disable physical media ejection -->
+        <disable-physical-media-formatting /> <!-- Disable physical media formatting -->
+        <disable-physical-media-partitioning /> <!-- Disable physical media partitioning -->
+        <disable-physical-media-encryption /> <!-- Disable physical media encryption -->
+        <disable-physical-media-decryption /> <!-- Disable physical media decryption -->
+        <disable-physical-media-backup /> <!-- Disable physical media backup -->
+        <disable-physical-media-restore /> <!-- Disable physical media restore -->
+        <disable-physical-media-share /> <!-- Disable physical media sharing -->
+        <disable-physical-media-transfer /> <!-- Disable physical media transfer -->
+        <disable-physical-media-copy /> <!-- Disable physical media copying -->
+        <disable-physical-media-move /> <!-- Disable physical media moving -->
+        <disable-physical-media-delete /> <!-- Disable physical media deletion -->
+        <disable-physical-media-rename /> <!-- Disable physical media renaming -->
+        <disable-physical-media-create /> <!-- Disable physical media creation -->
+        <disable-physical-media-modify /> <!-- Disable physical media modification -->
+        <disable-physical-media-access /> <!-- Disable physical media access -->
+        <disable-physical-media-management /> <!-- Disable physical media management -->
+    </uses-policies>
+</device-admin>

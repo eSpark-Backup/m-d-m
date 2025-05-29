@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MDM</string>
+    <string name="device_admin_label">MDM Device Admin</string>
+    <string name="device_admin_description">Required for MDM functionality to manage device settings and security policies.</string>
+</resources>
