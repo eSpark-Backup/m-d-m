@@ -8,7 +8,6 @@ import android.view.WindowManager;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
-import dagger.hilt.android.AndroidEntryPoint;
 
 public class DeviceStatusActivity extends Activity {
     public static final String EXTRA_STATUS = "status";

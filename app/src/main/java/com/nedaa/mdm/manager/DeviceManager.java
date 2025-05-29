@@ -12,10 +12,6 @@ import com.nedaa.mdm.utils.NetworkUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
-import dagger.hilt.android.qualifiers.ApplicationContext;
 import io.reactivex.Single;
 
 public class DeviceManager {
@@ -28,11 +24,9 @@ public class DeviceManager {
     private final SharedPreferences prefs;
     private ApiService deviceApi;
 
-    @Inject
-    public DeviceManager(@ApplicationContext Context context, ApiService deviceApi) {
-        Context context1 = context.getApplicationContext();
+    public DeviceManager(Context context, ApiService deviceApi) {
         this.deviceApi = deviceApi;
-        this.prefs = context1.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        this.prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
     }
 
     private SharedPreferences getPrefs(Context context) {

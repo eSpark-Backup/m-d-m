@@ -16,6 +16,8 @@ import com.nedaa.mdm.activity.DeviceStatusActivity;
 import com.nedaa.mdm.manager.APNManager;
 import com.nedaa.mdm.manager.AppManager;
 import com.nedaa.mdm.manager.DeviceManager;
+import com.nedaa.mdm.service.retrofit.ApiClient;
+import com.nedaa.mdm.service.retrofit.ApiService;
 import com.nedaa.mdm.utils.BatteryUtils;
 import com.nedaa.mdm.utils.NetworkUtils;
 
@@ -25,9 +27,6 @@ import java.util.TimerTask;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import javax.inject.Inject;
-
-import dagger.hilt.android.AndroidEntryPoint;
 import io.reactivex.Single;
 import io.reactivex.disposables.Disposable;
 
@@ -37,13 +36,15 @@ public class MDMService extends Service {
     private static final int NOTIFICATION_ID = 1;
     private static final String SERVER_URL = "https://your-mdm-server.com"; // Replace with your server URL
     private Timer timer;
+    ApiService apiService = ApiClient.getClient().create(ApiService.class);
     private TelephonyManager telephonyManager;
-    @Inject DeviceManager deviceManager;
+    DeviceManager deviceManager;
     private Disposable deviceStatusDisposable;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        deviceManager = new DeviceManager(getApplicationContext(), apiService);
         createNotificationChannel();
         startForeground(NOTIFICATION_ID, createNotification());
         initializeManagers();

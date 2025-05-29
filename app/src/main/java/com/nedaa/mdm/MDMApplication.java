@@ -6,9 +6,7 @@ import android.os.Build;
 
 import com.nedaa.mdm.service.MDMService;
 
-import dagger.hilt.android.HiltAndroidApp;
 
-@HiltAndroidApp
 public class MDMApplication extends Application {
     @Override
     public void onCreate() {
